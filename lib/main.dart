@@ -27,6 +27,8 @@ class JankenPage extends StatefulWidget {
 }
 
 class _JankenPageState extends State<JankenPage> {
+  String myHand = '✊';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +39,9 @@ class _JankenPageState extends State<JankenPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              '✊',
-              style: TextStyle(
+            Text(
+              myHand,
+              style: const TextStyle(
                 fontSize: 32,
               ),
             ),
@@ -49,19 +51,22 @@ class _JankenPageState extends State<JankenPage> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    print('✊');
+                    myHand = '✊';
+                    setState(() {});
                   },
                   child: const Text('✊')
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    print('✌️');
+                    myHand = '✌️';
+                    setState(() {});
                   },
                   child: const Text('✌️')
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    print('🖐');
+                    myHand = '🖐';
+                    setState(() {});
                   },
                   child: const Text('🖐')
                 ),
