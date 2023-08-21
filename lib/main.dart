@@ -38,15 +38,21 @@ class _JankenPageState extends State<JankenPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                print('✊');
+              },
               child: const Text('✊')
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                print('✌️');
+              },
               child: const Text('✌️')
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                print('🖐');
+              },
               child: const Text('🖐')
             ),
           ],
