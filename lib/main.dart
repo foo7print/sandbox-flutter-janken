@@ -34,26 +34,38 @@ class _JankenPageState extends State<JankenPage> {
         title: const Text('じゃんけん'),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                print('✊');
-              },
-              child: const Text('✊')
+            const Text(
+              '✊',
+              style: TextStyle(
+                fontSize: 32,
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                print('✌️');
-              },
-              child: const Text('✌️')
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print('🖐');
-              },
-              child: const Text('🖐')
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    print('✊');
+                  },
+                  child: const Text('✊')
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('✌️');
+                  },
+                  child: const Text('✌️')
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('🖐');
+                  },
+                  child: const Text('🖐')
+                ),
+              ],
             ),
           ],
         )
