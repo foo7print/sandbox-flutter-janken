@@ -29,6 +29,11 @@ class JankenPage extends StatefulWidget {
 class _JankenPageState extends State<JankenPage> {
   String myHand = '✊';
 
+  void selectHand(String selectedHand) {
+    myHand = selectedHand;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,22 +56,19 @@ class _JankenPageState extends State<JankenPage> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    myHand = '✊';
-                    setState(() {});
+                    selectHand('✊');
                   },
                   child: const Text('✊')
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    myHand = '✌️';
-                    setState(() {});
+                    selectHand('✌️');
                   },
                   child: const Text('✌️')
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    myHand = '🖐';
-                    setState(() {});
+                    selectHand('🖐');
                   },
                   child: const Text('🖐')
                 ),
