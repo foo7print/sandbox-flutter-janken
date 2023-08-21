@@ -33,6 +33,25 @@ class _JankenPageState extends State<JankenPage> {
       appBar: AppBar(
         title: const Text('じゃんけん'),
       ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('✊')
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('✌️')
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('🖐')
+            ),
+          ],
+        )
+      ),
     );
   }
 }
