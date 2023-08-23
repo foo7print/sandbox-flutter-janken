@@ -29,8 +29,11 @@ class JankenPage extends StatefulWidget {
 }
 
 class _JankenPageState extends State<JankenPage> {
-  String myHand = '✊';
-  String computerHand = '✊';
+  static const String goo = '✊';
+  static const String choki = '✌️';
+  static const String par = '🖐';
+  String myHand = goo;
+  String computerHand = goo;
   String result = '引き分け';
 
   void selectHand(String selectedHand) {
@@ -48,11 +51,11 @@ class _JankenPageState extends State<JankenPage> {
   void judge() {
     if (myHand == computerHand) {
       result = '引き分け';
-    } else if (myHand == '✊' && computerHand == '✌️') {
+    } else if (myHand == goo && computerHand == choki) {
       result = '勝ち';
-    } else if (myHand == '✌️' && computerHand == '🖐') {
+    } else if (myHand == choki && computerHand == par) {
       result = '勝ち';
-    } else if (myHand == '🖐' && computerHand == '✊') {
+    } else if (myHand == par && computerHand == goo) {
       result = '勝ち';
     } else {
       result = '負け';
@@ -62,13 +65,13 @@ class _JankenPageState extends State<JankenPage> {
   String randomNumberToHand(int randomNumber) {
     switch(randomNumber) {
       case 0:
-        return '✊';
+        return goo;
       case 1:
-        return '✌️';
+        return choki;
       case 2:
-        return '🖐';
+        return par;
       default:
-        return '✊';
+        return goo;
     }
   }
 
@@ -108,21 +111,21 @@ class _JankenPageState extends State<JankenPage> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    selectHand('✊');
+                    selectHand(goo);
                   },
-                  child: const Text('✊')
+                  child: const Text(goo)
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    selectHand('✌️');
+                    selectHand(choki);
                   },
-                  child: const Text('✌️')
+                  child: const Text(choki)
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    selectHand('🖐');
+                    selectHand(par);
                   },
-                  child: const Text('🖐')
+                  child: const Text(par)
                 ),
               ],
             ),
